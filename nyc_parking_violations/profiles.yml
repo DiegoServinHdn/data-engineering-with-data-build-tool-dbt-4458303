@@ -1,12 +1,23 @@
 nyc_parking_violations:
   outputs:
+<<<<<<< HEAD
     dev:
       type: duckdb
       path: '../data/nyc_parking_violations.db'
     prod:
+=======
+   dev:
+     type: duckdb
+     path: '../data/nyc_parking_violations.db'
+   prod:
+>>>>>>> origin/main
      type: duckdb
      # note that path is slightly different as GitHub actions
      # start in the root directory and not in the
      # nyc_parking_violations directory
+<<<<<<< HEAD
      path: '../data/prod_nyc_parking_violations.db'  
+=======
+     path: './data/prod_nyc_parking_violations.db'  
+>>>>>>> origin/main
   target: dev
