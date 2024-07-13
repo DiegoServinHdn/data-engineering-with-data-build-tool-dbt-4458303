@@ -14,9 +14,6 @@ SELECT
     violations.violation_county,
     violations.violation_legal_code,
     codes.fee_usd
-FROM
-    {{ref('silver_parking_violations')}} AS violations
-LEFT JOIN
-    {{ref('silver_parking_violation_codes')}} AS codes ON
-    violations.violation_code = codes.violation_code AND
-    violations.is_manhattan_96th_st_below = codes.is_manhattan_96th_st_below
+FROM {{ref('silver_parking_violations')}} AS violations
+    LEFT JOIN {{ref('silver_parking_violation_codes')}} AS codes ON violations.violation_code = codes.violation_code
+        AND violations.is_manhattan_96th_st_below = codes.is_manhattan_96th_st_below

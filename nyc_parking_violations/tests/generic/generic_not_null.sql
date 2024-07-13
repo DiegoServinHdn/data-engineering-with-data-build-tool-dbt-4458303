@@ -1,7 +1,7 @@
-{% test generic_not_null(model, column_name) %}
-
-    select *
-    from {{ model }}
-    where {{ column_name }} is null
-
-{% endtest %}
+{% test generic_not_null (model, column_name) % }
+SELECT
+    *
+FROM
+    {{ model }}
+WHERE
+    {{ column_name }} IS NULL {% endtest % }
