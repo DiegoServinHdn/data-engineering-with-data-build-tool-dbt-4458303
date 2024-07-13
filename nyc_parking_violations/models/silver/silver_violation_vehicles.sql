@@ -7,5 +7,4 @@ SELECT
     vehicle_expiration_date,
     vehicle_color,
     vehicle_year
-FROM
-    {{ref('silver_parking_violations')}}
+FROM {{ref('silver_parking_violations')}}
